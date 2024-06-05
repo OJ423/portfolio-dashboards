@@ -6,15 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  min-height: 100vh;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,6 +19,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  contain: inline-size;
+}
+
+.pattern-bkg {
+  background-color: #e5e5f7;
+opacity: 0.1;
+background-size: 12px 12px;
+background-image: repeating-linear-gradient(45deg, #444cf7 0, #444cf7 1.2000000000000002px, #e5e5f7 0, #e5e5f7 50%);
 }
 
 @layer utilities {
